@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main (){
-	float peso; float altura; float imc;
+	float peso, altura, imc;
 	
 	printf("Digite a sua altura: ");
 	scanf("%f", &altura);

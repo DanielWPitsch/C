@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-	float a=0; float b=0; float c=0; float delta=0; float x1=0; float x2=0;
+	float a, b, c, delta, x1, x2;
 	
 	printf("Digite o valor de a: ");
 	scanf("%f", &a);

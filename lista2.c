@@ -12,7 +12,6 @@ int main(void){
     for(i = 0; i < tamanho; i++){
         if(vetor[i] > maior){
             maior = vetor[i];
-            printf("%d", maior);
         }
     }
     printf("O maior valor do vetor eh: %d", maior);

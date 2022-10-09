@@ -4,11 +4,10 @@ int main(){
 	
 	float salario = 1.0;
 	float salarioAcumulador = 0;
-	int filhos; 
+	int filhos, media; 
 	float salario100 = 0;
 	float filhosAcumulador = 0;
 	float contadorPessoas = 0;
-	float media;
 	float maiorSalario = 1.0;	
 	
 	while(salario >= 0){
@@ -35,7 +34,6 @@ int main(){
 		}
 		
 	}
-	
 	printf("A media dos salarios eh: %.2f\n", salarioAcumulador / contadorPessoas);
 	printf("A media dos filhos eh: %.2f\n", filhosAcumulador / contadorPessoas);
 	printf("O maior salario eh: %.2f\n", maiorSalario);

@@ -24,25 +24,13 @@ int main(){
 	
 	if(opcao == 1){
 		fp = fopen("clientes.txt", "r");
-		if(fp){
-			lehArquivo("clientes.txt", fp, leitura);
-		}else{
-			printf("Arquivo inxistente!\n");
-		}
+		lehArquivo("clientes.txt", fp, leitura);
 	}else if(opcao == 2){
 		fp = fopen("produtos.txt", "r");
-		if(fp){
-			lehArquivo("produtos.txt", fp, leitura);
-		}else{
-			printf("Arquivo inxistente!\n");
-		}
+		lehArquivo("produtos.txt", fp, leitura);
 	}else if(opcao == 3){
 		fp = fopen("funcionarios.txt", "r");
-		if(fp){
-			lehArquivo("funcionarios.txt", fp, leitura);
-		}else{
-			printf("Arquivo inxistente!\n");
-		}
+		lehArquivo("funcionarios.txt", fp, leitura);
 	}else{
 		printf("Opcao invalida!");
 	}

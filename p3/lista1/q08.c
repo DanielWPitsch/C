@@ -7,12 +7,11 @@
 
 #include<stdio.h>
 #include<math.h>
-#define PI = 3.14159265
+#define pi 3.14159265
 
 int main(){
 	
 	float raio, area;
-	float pi = 3.1415;
 	
 	printf("Informe o valor do raio:");
 	scanf("%f", &raio);

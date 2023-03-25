@@ -6,7 +6,7 @@
 */
 
 #include<stdio.h>
-#define PI = 3.14159265
+#define PI 3.14159265
 
 int converteGrauRadiano(float n){
 	return n * (PI/180) ;

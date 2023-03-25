@@ -8,6 +8,9 @@
 #include<stdio.h>
 #include<math.h>
 
-float cubo(float numero){	
-	return pow(numero, 3);
+int main(){
+	
+	
+	return 1;
+	
 }

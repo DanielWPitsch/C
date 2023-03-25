@@ -6,8 +6,11 @@
 */
 
 #include<stdio.h>
-#include<math.h>
 
-float funcaoQuadrado(float a, float b){
-	return (pow(a, 2)) + (2*a*b) + (pow(b,2));
+int somatorio(int n){
+	int i, soma=0;
+	for (i=1; i<=n; i++){
+		soma = soma + i;
+	}
+	return soma;
 }

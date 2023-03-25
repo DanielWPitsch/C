@@ -6,8 +6,8 @@
 */
 
 #include<stdio.h>
-#include<math.h>
+#define PI = 3.14159265
 
-float funcaoQuadrado(float a, float b){
-	return (pow(a, 2)) + (2*a*b) + (pow(b,2));
+int converteGrauRadiano(float n){
+	return n * (PI/180) ;
 }

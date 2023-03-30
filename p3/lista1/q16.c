@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa recebe um numero de 1 a 12 e retorna o nome do mês correspondente
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

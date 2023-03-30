@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa calcula o capital acumulado por juros composto pelos tempo dado em anos
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

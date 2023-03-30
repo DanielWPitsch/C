@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa calcula o IMC dado
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

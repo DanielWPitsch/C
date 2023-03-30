@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : A função calcula o número de arranjos de n objetos diferentes 
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

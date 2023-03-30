@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa calcula o valor da média aritmetica, harmonica, geometrica e quadratica
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 24/03/2023
  Observações:

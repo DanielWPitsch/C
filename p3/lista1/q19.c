@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa calcula o tempo necessario para que uma massa se torne menor que 0.05 gramas
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa recebe um número e imprime o respectivo em fibonacci e também todos os anteriores
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

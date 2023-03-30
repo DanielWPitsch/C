@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa diz se um número qualquer é primo ou não
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O prograna calcula o desconto de acordo com o tipo de combustivel selecionado
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
  Observações:

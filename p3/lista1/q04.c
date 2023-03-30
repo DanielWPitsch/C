@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : A função retorna o resultado do produto notável quadrado de dois termos
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 24/03/2023
  Observações:

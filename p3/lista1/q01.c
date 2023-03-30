@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O rrograma recebe os valores dos catetos para enviar retornar o valor da hipotenusa
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 24/03/2023
  Observações:

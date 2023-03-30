@@ -1,5 +1,5 @@
 /*
- Função :
+ Função : O programa calcula a distância entre dois pontos
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 24/03/2023
  Observações:

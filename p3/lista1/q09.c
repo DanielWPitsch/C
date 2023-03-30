@@ -1,9 +1,8 @@
 /*
- Função :
+ Função : O programa calcula a diferença entre dois horários e retorna o intervalo entre eles
  Autor : Daniel Warella Pitsch, p3, noite, CC
  Data : 25/03/2023
- Observações: Criar uma função que calcule a diferença entre duas horas distintas de um mesmo dia e retorne o
-intervalo de tempo entre os dois horários (ler no formato hh:mm e imprimir no formato hh:mm)
+ Observações:
 */
 
 #include<stdio.h>

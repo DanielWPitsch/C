@@ -1,7 +1,7 @@
 /*
- Função :
+ Função : Esse programa calcula a soma da função cúbica
  Autor : Daniel Warella Pitsch, p3, noite, CC
- Data : 25/03/2023
+ Data : 30/03/2023
  Observações:
 */
 

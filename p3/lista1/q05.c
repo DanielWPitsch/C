@@ -8,12 +8,12 @@
 #include<stdio.h>
 #include<math.h>
 
-float cubo(float numero){	
-	return pow(numero, 3);
+float cubo(float n){	
+	return n*n*n;
 }
 
-float funcaoQuadrado(float a, float b){
-	return (pow(a, 2)) + (2*a*b) + (pow(b,2));
+float quadrado(float n){
+	return n*n;
 }
 
 int main (){
@@ -25,7 +25,7 @@ int main (){
 	printf("Digite o valor de y:");
 	scanf("%f", &y);
 	
-	resultado = cubo(x) + (funcaoQuadrado(x,y) * 10) + cubo(y);
+	resultado = cubo(x) + (3 * quadrado(x) * y) + (3 * x * quadrado(y)) + cubo(y);
 	printf("O resultado da funcao cubica eh: %0.2f", resultado); 
 	
 	return 1;

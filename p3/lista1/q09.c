@@ -6,6 +6,7 @@
 */
 
 #include<stdio.h>
+#include<math.h>
 
 int main(){
 	int horasI, minutosI, horasF, minutosF, diferenca, horasDiferenca, minutosDiferenca;
@@ -20,9 +21,10 @@ int main(){
     minutosI = minutosI + (horasI *60);
     minutosF = minutosF + (horasF *60);
     
-    diferenca = minutosF - minutosI;
-    horasDiferenca = diferenca / 60;
-	minutosDiferenca =  diferenca % 60;
+    diferenca = abs(minutosF - minutosI);
+    horasDiferenca = abs(diferenca / 60);
+	minutosDiferenca =  abs(diferenca % 60);
+	
 	
 	printf("a diferenca de hora eh: %d%c%d", horasDiferenca, dpontos, minutosDiferenca);
 }

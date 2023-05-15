@@ -21,7 +21,3 @@ int fatorial(int numero){
     
    return fatorial ;
 }
-
-int converteGrauRadiano(float nArranjos, float rObjetos){
-	return fatorial(nArranjos) / (nArranjos - rObjetos) ;
-}

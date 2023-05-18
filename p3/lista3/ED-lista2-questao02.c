@@ -1,7 +1,7 @@
 /*
 ** Função :
-** Autor :
-** Data :
+** Autor : Daniel Warella Pitsch
+** Data : 17/05/2023
 ** Observações:
 */
 

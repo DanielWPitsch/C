@@ -28,12 +28,12 @@ int removeElemento(int indice, Empregado** Empregados, int tamanho);
 //void criaData(Data data, int quantidade);
 
 int main(){
-	Empregado* Empregados;
 	int quantidade = 0, loop=1, opcao, indice;
-	Empregados = (Empregado*)malloc(quantidade * sizeof(Empregado));
+	Empregado* Empregados = (Empregado*)malloc(quantidade * sizeof(Empregado));
 	
 	if(Empregados == NULL){
 		printf("Erro ao alocar memoria");
+		exit(1);
 	}
 	
 	while(loop != 0){

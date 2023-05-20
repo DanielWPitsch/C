@@ -1,5 +1,5 @@
 /*
-** Função : BubbleSort 
+** Função : Faz ordenação BubbleSort e conta a quantidade de vezes que entra na condição e as trocas 
 ** Autor : Daniel Warella Pitsch
 ** Data : 19/05/2023
 ** Observações:

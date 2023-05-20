@@ -7,6 +7,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 typedef struct aeroporto{
 	char Sigla[3];
@@ -21,9 +22,8 @@ int removeElemento(int indice, Aeroporto** Aeroportos, int tamanho);
 int criarElemento(int quantidade, Aeroporto** Aeroportos);
 
 int main(){
-	Aeroporto* Aeroportos;
 	int quantidade=0, loop=1, opcao, i, tamanho=0, indice;
-	Aeroportos = (Aeroporto *)malloc(quantidade*sizeof(Aeroporto));
+	Aeroporto* Aeroportos = (Aeroporto *)malloc(quantidade*sizeof(Aeroporto));
 	
 	if(Aeroportos == NULL){
 		printf("Erro ao alocar memoria");
@@ -35,15 +35,50 @@ int main(){
 		scanf("%d", &opcao);
 		
 		if(opcao == 1){
-			//printf("quantidade = %d", quantidade);
-			quantidade = criarElemento(quantidade, &Aeroportos);
+			quantidade++;
+			printf("quantidade: %d\n\n", quantidade);
+			if(quantidade > 1){
+				Aeroporto* Aeroportos = (Aeroporto *)realloc(Aeroportos, quantidade*sizeof(Aeroporto));
+				if(Aeroportos == NULL){
+					printf("Erro ao realocar memoria");
+					free(Aeroportos);
+					return 1;
+				}
+			}
+			printf("Informe a Sigla: ");
+			scanf("%s", &Aeroportos[quantidade-1].Sigla);
+			printf("problema");
+			
+			printf("Informe a Cidade: ");
+			scanf("%s", &Aeroportos[quantidade-1].Cidade);
+			
+			printf("Informe a Pais: ");
+			scanf("%s", &Aeroportos[quantidade-1].Pais);
+			
+			printf("Informe a Taxa: ");
+			scanf("%f", &Aeroportos[quantidade-1].Taxa);
+			
+			printf("Informe a Capacidade: ");
+			scanf("%d", &Aeroportos[quantidade-1].Capacidade);
+			
 		}else if(opcao == 2){
 			listarElementos(quantidade, Aeroportos);
 		}else if(opcao ==3){
 			listarElementos(quantidade, Aeroportos);
 			printf("\nInforme qual aeroporto voce deseja excluir?\n");
 			scanf("%d", &indice);
-			quantidade = removeElemento(indice, &Aeroportos, quantidade);
+			//quantidade = removeElemento(indice, &Aeroportos, quantidade);
+			int j;
+	
+			for(j=indice;j < quantidade; j++){
+				strcpy(Aeroportos[j].Sigla, Aeroportos[j+1].Sigla);
+				printf("sigla: %s", Aeroportos[j].Sigla);
+				strcpy(Aeroportos[j].Cidade, Aeroportos[j+1].Cidade);
+				strcpy(Aeroportos[j].Pais, Aeroportos[j+1].Pais);
+				Aeroportos[j].Taxa = Aeroportos[j+1].Taxa;
+				Aeroportos[j].Capacidade = Aeroportos[j+1].Capacidade;
+			}
+			quantidade--;
 		}else if(opcao == 4){
 			break;
 		}else{
@@ -68,29 +103,25 @@ void listarElementos(int tamanho, Aeroporto Aeroportos[]){
 		printf("\nCapacidade: %d\n", Aeroportos[i].Capacidade);
 	}
 }
-
+/*
 int removeElemento(int indice, Aeroporto** Aeroportos, int tamanho){
 	int j;
 	
 	for(j=indice;j < tamanho-1; j++){
-		Aeroportos[j] = Aeroportos[j+1];
+		strcpy(Aeroportos[j]->Sigla, Aeroportos[j+1]->Sigla);
+		strcpy(Aeroportos[j]->Cidade, Aeroportos[j+1]->Cidade);
+		strcpy(Aeroportos[j]->Pais, Aeroportos[j+1]->Pais);
+		Aeroportos[j]->Taxa = Aeroportos[j+1]->Taxa;
+		Aeroportos[j]->Capacidade = Aeroportos[j+1]->Capacidade;
 	}
 	return tamanho-1;
 }
-
+*/
 int criarElemento(int quantidade, Aeroporto** Aeroportos){
-	quantidade++;
-	if(quantidade > 1){
-		Aeroportos = (Aeroporto **)realloc(Aeroportos, quantidade*sizeof(Aeroporto));
-		if(Aeroportos == NULL){
-			printf("Erro ao realocar memoria");
-			free(Aeroportos);
-			return 1;
-		}
-	}
-
+	
 	printf("Informe a Sigla: ");
 	scanf("%s", &Aeroportos[quantidade-1]->Sigla);
+	printf("problema");
 	
 	printf("Informe a Cidade: ");
 	scanf("%s", &Aeroportos[quantidade-1]->Cidade);

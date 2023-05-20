@@ -16,7 +16,7 @@ typedef struct aeroporto{
 	int Capacidade;
 }Aeroporto;
 
-void listarAeroportos();
+void listarElementos();
 int removeElemento(int indice, Aeroporto** Aeroportos, int tamanho);
 int criarElemento(int quantidade, Aeroporto** Aeroportos);
 
@@ -35,11 +35,12 @@ int main(){
 		scanf("%d", &opcao);
 		
 		if(opcao == 1){
+			//printf("quantidade = %d", quantidade);
 			quantidade = criarElemento(quantidade, &Aeroportos);
 		}else if(opcao == 2){
-			listarAeroportos(quantidade, Aeroportos);
+			listarElementos(quantidade, Aeroportos);
 		}else if(opcao ==3){
-			listarAeroportos(quantidade, Aeroportos);
+			listarElementos(quantidade, Aeroportos);
 			printf("\nInforme qual aeroporto voce deseja excluir?\n");
 			scanf("%d", &indice);
 			quantidade = removeElemento(indice, &Aeroportos, quantidade);
@@ -55,7 +56,7 @@ int main(){
 	return 0;
 }
 
-void listarAeroportos(int tamanho, Aeroporto Aeroportos[]){
+void listarElementos(int tamanho, Aeroporto Aeroportos[]){
 	int i;
 	printf("\n-Lista de Aeroportos-\n", i);
 	for (i=0; i < tamanho; i++){
@@ -79,16 +80,15 @@ int removeElemento(int indice, Aeroporto** Aeroportos, int tamanho){
 
 int criarElemento(int quantidade, Aeroporto** Aeroportos){
 	quantidade++;
-	
 	if(quantidade > 1){
 		Aeroportos = (Aeroporto **)realloc(Aeroportos, quantidade*sizeof(Aeroporto));
-
 		if(Aeroportos == NULL){
 			printf("Erro ao realocar memoria");
 			free(Aeroportos);
 			return 1;
 		}
 	}
+
 	printf("Informe a Sigla: ");
 	scanf("%s", &Aeroportos[quantidade-1]->Sigla);
 	

@@ -84,7 +84,7 @@ int main(){
 			listarElementos(quantidade, Empregados);
 			printf("\nInforme qual empregado voce deseja excluir?\n");
 			scanf("%d", &indice);
-			quantidade = removeElemento(indice, &Empregados, quantidade);
+			//quantidade = removeElemento(indice, &Empregados, quantidade);
 		}else if(opcao == 4){
 			break;
 		}else{
@@ -93,10 +93,10 @@ int main(){
 		printf("\n\nDigite:\n1-Para fazer nova operacao\n0-Sair\n");
 		scanf("%d", &loop);
 	}
-		
+	free(Empregados);
 	return 0;
 }
-
+/*
 int removeElemento(int indice, Empregado** Empregados, int tamanho){
 	int j;
 	
@@ -105,7 +105,7 @@ int removeElemento(int indice, Empregado** Empregados, int tamanho){
 	}
 	return tamanho-1;
 }
-
+*/
 //int criarElemento(int quantidade, Empregado** Empregados){
 	//return quantidade;
 //}

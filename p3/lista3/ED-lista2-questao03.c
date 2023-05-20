@@ -72,7 +72,7 @@ int main(){
 	
 			for(j=indice;j < quantidade; j++){
 				strcpy(Aeroportos[j].Sigla, Aeroportos[j+1].Sigla);
-				printf("sigla: %s", Aeroportos[j].Sigla);
+				//printf("sigla: %s", Aeroportos[j].Sigla);
 				strcpy(Aeroportos[j].Cidade, Aeroportos[j+1].Cidade);
 				strcpy(Aeroportos[j].Pais, Aeroportos[j+1].Pais);
 				Aeroportos[j].Taxa = Aeroportos[j+1].Taxa;
@@ -88,6 +88,7 @@ int main(){
 		scanf("%d", &loop);
 	}
 	printf("-Fim-");
+	free(Aeroportos);
 	return 0;
 }
 

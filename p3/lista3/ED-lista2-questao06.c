@@ -25,10 +25,10 @@ int main() {
 }
 
 float raiz_quadrada(float n) {
-  float x0 = 1.0, x1, e = 0.0001, dif; 
+	float x0 = 1.0, x1, e = 0.0001, dif; 
 
   do {
-    x1 = x0 - (x0 * x0 - n) / (2 * x0); 
+	x1 = x0 - (x0 * x0 - n) / (2 * x0); 
     dif = fabs(x1 - x0); 
     x0 = x1; 
     //printf("dif: %f e x1: %f\n", dif, x1);

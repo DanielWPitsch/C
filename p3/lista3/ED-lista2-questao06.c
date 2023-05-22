@@ -1,5 +1,5 @@
 /*
-** Função : o programa receber um numero e retorna sua raiz quadrada usando o método de Newton-Raphson
+** Função : Dá a raiz quadrada usando o método de Newton-Raphson
 ** Autor : Daniel Warella Pitsch
 ** Data : 20/05/2023
 ** Observações: f(x) = x - cos(x); x0= 1; f'(x) = 1 + sin(x); xn = x - f(x) / f'(x).

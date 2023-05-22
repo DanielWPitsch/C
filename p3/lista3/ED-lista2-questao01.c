@@ -1,5 +1,5 @@
 /*
-** Função : Ordenação crescente dos elementos de um vetor
+** Função : Ordenação crescente dos elementos de um vetor com selection sort
 ** Autor : Daniel Warella Pitsch
 ** Data : 17/05/2023
 ** Observações:

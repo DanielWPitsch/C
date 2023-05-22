@@ -1,5 +1,5 @@
 /*
-** Função : Imprime todos os pares de primos, que somados resultam em pares entre 700 e 1100
+** Função : Imprime pares de primos, que somados resultam em pares entre 700 e 1100
 ** Autor : Daniel Warella Pitsch
 ** Data : 20/05/2023
 ** Observações:

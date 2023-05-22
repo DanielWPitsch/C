@@ -18,8 +18,6 @@ typedef struct aeroporto{
 }Aeroporto;
 
 void listarElementos();
-int removeElemento(int indice, Aeroporto** Aeroportos, int tamanho);
-int criarElemento(int quantidade, Aeroporto** Aeroportos);
 
 int main(){
 	int quantidade=0, loop=1, opcao, i, tamanho=0, indice;
@@ -67,18 +65,17 @@ int main(){
 			listarElementos(quantidade, Aeroportos);
 			printf("\nInforme qual aeroporto voce deseja excluir?\n");
 			scanf("%d", &indice);
-			//quantidade = removeElemento(indice, &Aeroportos, quantidade);
+			
 			int j;
-	
 			for(j=indice;j < quantidade; j++){
 				strcpy(Aeroportos[j].Sigla, Aeroportos[j+1].Sigla);
-				//printf("sigla: %s", Aeroportos[j].Sigla);
 				strcpy(Aeroportos[j].Cidade, Aeroportos[j+1].Cidade);
 				strcpy(Aeroportos[j].Pais, Aeroportos[j+1].Pais);
 				Aeroportos[j].Taxa = Aeroportos[j+1].Taxa;
 				Aeroportos[j].Capacidade = Aeroportos[j+1].Capacidade;
 			}
 			quantidade--;
+			
 		}else if(opcao == 4){
 			break;
 		}else{
@@ -103,38 +100,4 @@ void listarElementos(int tamanho, Aeroporto Aeroportos[]){
 		printf("\nTaxa: %.2f", Aeroportos[i].Taxa);
 		printf("\nCapacidade: %d\n", Aeroportos[i].Capacidade);
 	}
-}
-/*
-int removeElemento(int indice, Aeroporto** Aeroportos, int tamanho){
-	int j;
-	
-	for(j=indice;j < tamanho-1; j++){
-		strcpy(Aeroportos[j]->Sigla, Aeroportos[j+1]->Sigla);
-		strcpy(Aeroportos[j]->Cidade, Aeroportos[j+1]->Cidade);
-		strcpy(Aeroportos[j]->Pais, Aeroportos[j+1]->Pais);
-		Aeroportos[j]->Taxa = Aeroportos[j+1]->Taxa;
-		Aeroportos[j]->Capacidade = Aeroportos[j+1]->Capacidade;
-	}
-	return tamanho-1;
-}
-*/
-int criarElemento(int quantidade, Aeroporto** Aeroportos){
-	
-	printf("Informe a Sigla: ");
-	scanf("%s", &Aeroportos[quantidade-1]->Sigla);
-	printf("problema");
-	
-	printf("Informe a Cidade: ");
-	scanf("%s", &Aeroportos[quantidade-1]->Cidade);
-	
-	printf("Informe a Pais: ");
-	scanf("%s", &Aeroportos[quantidade-1]->Pais);
-	
-	printf("Informe a Taxa: ");
-	scanf("%f", &Aeroportos[quantidade-1]->Taxa);
-	
-	printf("Informe a Capacidade: ");
-	scanf("%d", &Aeroportos[quantidade-1]->Capacidade);
-	
-	return quantidade;
 }

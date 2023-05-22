@@ -23,16 +23,17 @@ int main(){
 	if(vetor == NULL){
 		printf("erro ao alocar memoria");
 	}
-	
+	printf("Vetor inicial: ");
 	for(i=0; i<tamanho; i++){
 		vetor[i] = rand() % 100;
-		printf("%d\n", vetor[i]);
+		printf("%d ", vetor[i]);
 	}
 	
 	bubbleSort(vetor, tamanho);
 	
+	printf("Vetor ordenado: ");
 	for(i=0; i<tamanho; i++){
-		printf("vetor[%d]: %d\n",i, vetor[i]);
+		printf("%d ", vetor[i]);
 	}
 	return 1;
 }
@@ -53,7 +54,7 @@ void bubbleSort(int *vetor, int tamanho) {
             }
         }
     }
-    printf("ifs: %d\n", ifs);
+    printf("\nifs: %d\n", ifs);
     printf("trocas: %d\n\n", trocas);
     
 }

@@ -1,22 +1,28 @@
-/*
-** Função : TAD de numeros complexos
-** Autor : Daniel Warella Pitsch
-** Data : 22/05/2023
-** Observações:
-*/
-#include <stdio.h>
-#include <stdlib.h>
-
 typedef struct complexo {
   double real; 
   double imag; 
 } Complexo;
 
+Complexo* cria_complexo(double real, double imag);
+
+void destroi_complexo(Complexo* c);
+
+Complexo* le_complexo();
+
+Complexo* soma_complexos(Complexo* c1, Complexo* c2);
+
+Complexo* subtrai_complexos(Complexo* c1, Complexo* c2);
+
+Complexo* multiplica_complexos(Complexo* c1, Complexo* c2);
+
+Complexo* divide_complexos(Complexo* c1, Complexo* c2);
+
+void mostra_complexo(Complexo* c);
 
 Complexo* cria_complexo(double real, double imag) {
   Complexo* c = (Complexo*) malloc(sizeof(Complexo)); 
   if (c == NULL) { 
-    printf("Erro de alocacao de memoria\n"); 
+    printf("Erro de alocação de memória\n"); 
     exit(1); 
   }
   c->real = real; 
@@ -32,9 +38,9 @@ void destroi_complexo(Complexo* c) {
 
 Complexo* le_complexo() {
   double real, imag; 
-  printf("Digite a parte real do numero complexo: "); 
+  printf("Digite a parte real do número complexo: "); 
   scanf("%lf", &real); 
-  printf("Digite a parte imaginária do numero complexo: "); 
+  printf("Digite a parte imaginária do número complexo: "); 
   scanf("%lf", &imag); 
 
   return cria_complexo(real, imag); 
@@ -64,7 +70,7 @@ Complexo* multiplica_complexos(Complexo* c1, Complexo* c2) {
 
 Complexo* divide_complexos(Complexo* c1, Complexo* c2) {
   if (c2->real == 0 && c2->imag == 0) { 
-    printf("\nErro: Impossivel divisao por zero!"); 
+    printf("\nErro: Impossível divisão por zero!"); 
     exit(1); 
   }
 
@@ -77,43 +83,5 @@ Complexo* divide_complexos(Complexo* c1, Complexo* c2) {
 
 void mostra_complexo(Complexo* c) {
   printf("(%lf,%lf)", c->real, c->imag); 
-}
-
-int main() {
-	printf("Informe dois numeros complexos");
-	Complexo* c1 = le_complexo(); 
-	Complexo* c2 = le_complexo(); 
-
-	printf("\nO primeiro numero complexo eh: "); 
-	mostra_complexo(c1); 
-  
-	printf("\nO segundo numero complexo eh: "); 
-	mostra_complexo(c2); 
-  
-	Complexo* soma = soma_complexos(c1, c2); 
-	printf("\nA soma dos numeros complexos eh: ");
-	mostra_complexo(soma); 
-  
-	Complexo* subtracao = subtrai_complexos(c1, c2); 
-	printf("\nA subtracao dos numeros complexos eh: "); 
-	mostra_complexo(subtracao); 
-  
-	Complexo* multiplicacao = multiplica_complexos(c1, c2); 
-	printf("\nA multiplicacao dos numeros complexos eh: "); 
-	mostra_complexo(multiplicacao); 
-  
-	Complexo* divisao = divide_complexos(c1, c2); 
-	printf("\nA divisao dos numeros complexos eh: "); 
-	mostra_complexo(divisao); 
-
-	destroi_complexo(c1); 
-	destroi_complexo(c2); 
-	destroi_complexo(soma); 
-	destroi_complexo(subtracao); 
-	destroi_complexo(multiplicacao); 
-	destroi_complexo(divisao); 
-	
-	printf("\n\n-Fim-");
-	return 0; 
 }
 

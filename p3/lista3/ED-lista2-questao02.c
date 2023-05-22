@@ -23,11 +23,12 @@ typedef struct empregado{
 	float salario;
 }Empregado;
 
-void listarElementos();
-int removeElemento(int indice, Empregado** Empregados, int tamanho);
+void criarElemento(int quantidade, Empregado Empregados[]);
+void listarElementos(int tamanho, Empregado Empregados[]);
+int removeElemento(int quantidade, Empregado Empregados);
 
 int main(){
-	int quantidade = 0, loop=1, opcao, indice;
+	int quantidade = 0, loop=1, opcao;
 	Empregado* Empregados = (Empregado*)malloc(quantidade * sizeof(Empregado));
 	
 	if(Empregados == NULL){
@@ -47,53 +48,17 @@ int main(){
 				if(Empregados == NULL){
 					printf("Erro ao realocar memoria");
 					free(Empregados);
-					return 1;
+					exit(0);
 				}
 			}
-			
-			printf("Informe a dia nasicmento: ");
-			scanf("%d", &Empregados[quantidade-1].nascimento.dia);
-			
-			printf("Informe o mes nasicmento: ");
-			scanf("%s", &Empregados[quantidade-1].nascimento.mes);
-			
-			printf("Informe o ano nasicmento: ");
-			scanf("%d", &Empregados[quantidade-1].nascimento.ano);
-			
-			printf("Informe o RG: ");
-			scanf("%s", &Empregados[quantidade-1].RG);
-		
-			printf("Informe a dia admissao: ");
-			scanf("%d", &Empregados[quantidade-1].admissao.dia);
-			
-			printf("Informe o mes admissao: ");
-			scanf("%s", &Empregados[quantidade-1].admissao.mes);
-			
-			printf("Informe o ano admissao: ");
-			scanf("%d", &Empregados[quantidade-1].admissao.ano);
-			
-			printf("Informe o salario: ");
-			scanf("%f", &Empregados[quantidade-1].salario);
+		criarElemento(quantidade, Empregados);
 			
 		}else if(opcao == 2){
 			listarElementos(quantidade, Empregados);
 						
 		}else if(opcao ==3){
 			listarElementos(quantidade, Empregados);
-			printf("\nInforme qual empregado voce deseja excluir?\n");
-			scanf("%d", &indice);
-			int j;
-			for(j=indice;j < quantidade; j++){
-				strcpy(Empregados[j].nome, Empregados[j+1].nome);
-				Empregados[j].nascimento.dia = Empregados[j+1].nascimento.dia;
-				strcpy(Empregados[j].nascimento.mes, Empregados[j+1].nascimento.mes);
-				Empregados[j].nascimento.ano = Empregados[j+1].nascimento.ano;
-				strcpy(Empregados[j].RG, Empregados[j+1].RG);
-				Empregados[j].admissao.dia = Empregados[j+1].admissao.dia;
-				strcpy(Empregados[j].admissao.mes, Empregados[j+1].admissao.mes);
-				Empregados[j].admissao.ano = Empregados[j+1].admissao.ano;
-				Empregados[j].salario = Empregados[j+1].salario;
-			}
+			removerElemento(quantidade, Empregados);
 			quantidade--;
 			
 		}else if(opcao == 4){
@@ -123,5 +88,49 @@ void listarElementos(int tamanho, Empregado Empregados[]){
 	}else{
 		printf("Nenhum funcionario cadastrado!");
 	}
+}
+
+void criarElemento(int quantidade, Empregado Empregados[]){
+	printf("Informe a dia nasicmento: ");
+	scanf("%d", &Empregados[quantidade-1].nascimento.dia);
 	
+	printf("Informe o mes nasicmento: ");
+	scanf("%s", &Empregados[quantidade-1].nascimento.mes);
+	
+	printf("Informe o ano nasicmento: ");
+	scanf("%d", &Empregados[quantidade-1].nascimento.ano);
+	
+	printf("Informe o RG: ");
+	scanf("%s", &Empregados[quantidade-1].RG);
+
+	printf("Informe a dia admissao: ");
+	scanf("%d", &Empregados[quantidade-1].admissao.dia);
+	
+	printf("Informe o mes admissao: ");
+	scanf("%s", &Empregados[quantidade-1].admissao.mes);
+	
+	printf("Informe o ano admissao: ");
+	scanf("%d", &Empregados[quantidade-1].admissao.ano);
+	
+	printf("Informe o salario: ");
+	scanf("%f", &Empregados[quantidade-1].salario);
+}
+
+removerElemento(int quantidade, Empregado Empregados[]){
+	int indice, j;
+	
+	printf("\nInforme qual empregado voce deseja excluir?\n");
+	scanf("%d", &indice);
+	
+	for(j=indice;j < quantidade; j++){
+		strcpy(Empregados[j].nome, Empregados[j+1].nome);
+		Empregados[j].nascimento.dia = Empregados[j+1].nascimento.dia;
+		strcpy(Empregados[j].nascimento.mes, Empregados[j+1].nascimento.mes);
+		Empregados[j].nascimento.ano = Empregados[j+1].nascimento.ano;
+		strcpy(Empregados[j].RG, Empregados[j+1].RG);
+		Empregados[j].admissao.dia = Empregados[j+1].admissao.dia;
+		strcpy(Empregados[j].admissao.mes, Empregados[j+1].admissao.mes);
+		Empregados[j].admissao.ano = Empregados[j+1].admissao.ano;
+		Empregados[j].salario = Empregados[j+1].salario;
+	}
 }

@@ -13,7 +13,7 @@
  
 void quick_sort(int *a, int left, int right);
  
-int main(int argc, char** argv){
+int main(){
 	int i, vetor[MAX];
 	srand(time(NULL));
 	
@@ -31,7 +31,6 @@ int main(int argc, char** argv){
  	}
 
 	printf("\n\n-Fim-\n\n");
-	system("pause");
 	return 0;
 }
 

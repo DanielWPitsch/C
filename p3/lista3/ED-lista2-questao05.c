@@ -21,9 +21,9 @@ int main(){
 		while (soma != i){
 			n1 = aleatorio(650);
 			n2 = aleatorio(numero);
-			if(ehPrimo(n1) == 1 && ehPrimo(n2) == 1 && n1 !=0 && n2!=0){
+			if(ehPrimo(n1) == 1){
 				soma = n1 + n2;
-				if(n1+n2 == i ){
+				if(n1+n2 == i && soma > 2){
 					printf("%d + %d e a soma: %d \n", n1, n2, soma);
 				}
 			}
@@ -49,5 +49,10 @@ bool ehPrimo(int numero){
 }
 
 int aleatorio(int n){ 
-		return rand() % n;
+	int random = rand() % n;
+	if(random > 0){
+		return random;
+	}else{
+		aleatorio(n);
+	}
 }

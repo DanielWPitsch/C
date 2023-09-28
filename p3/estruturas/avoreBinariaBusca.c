@@ -26,18 +26,18 @@ int main( void )
    NohArvorePonteiro raizPt = NULL; 
 
    srand( time( NULL ) );
-   printf("Povoando a arvore!" );
+   printf("Povoando a arvore!\n" );
    // Inserindo valores aleatohrios
    for ( i = 1; i <= 10; i++ ) {
       item = rand() % 15;
-      printf( "%3d", item );
+      printf( "%3d\n", item );
       inserirNoh( &raizPt, item );
    } 
    /* Printando em ordem */
    printf( "\n\nA sequencia em ordem eh:\n" );
    emOrdem(raizPt);
    
-   printf("-Fim-\n");
+   printf("\n-Fim-\n");
    system("pause");
    return 0; 
 } 
